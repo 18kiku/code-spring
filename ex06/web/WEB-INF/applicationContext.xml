@@ -5,9 +5,9 @@
        xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd">
 
-    <!--<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+    <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
         <property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"/>
-        <property name="jdbcUrl" value="jdbc:log4jdbc:oracle:thin:@192.168.0.65:1521:XE"/>
+        <property name="jdbcUrl" value="jdbc:log4jdbc:oracle:thin:@0.0.0.0:1521:XE"/>
         <property name="username" value="book_ex"/>
         <property name="password" value="1234"/>
     </bean>
@@ -18,8 +18,8 @@
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
-    </bean>-->
+    </bean>
 
-    <!--<mybatis-spring:scan base-package="org.zerock.mapper"/>
-    <context:component-scan base-package="org.zerock.service"/>-->
+    <mybatis-spring:scan base-package="org.zerock.mapper"/>
+    <context:component-scan base-package="org.zerock.service"/>
 </beans>

@@ -13,18 +13,11 @@
 <!-- all or member or admin -->
 <h1>/sample/all page</h1>
 
-
 <sec:authorize access="isAnonymous()">
-
-  <a href="/customLogin">로그인</a>
-
+    <a href="/customLogin">로그인</a>
 </sec:authorize>
-
 <sec:authorize access="isAuthenticated()">
-
-  <a href="/customLogout">로그아웃</a>
-
+    <a href="/customLogout">로그아웃</a>
 </sec:authorize>
-
 </body>
 </html>
